@@ -1,0 +1,62 @@
+Features 1
+    1. home page will show use to do list for today if exists else show no lists and a link to add lists
+
+Algorithm for feature 1
+    1. Get use to do lists from local Storage
+    2. Get the to do lists for today date
+    3. If exists show them
+    4. else show no lists and a link to add lists
+
+Features 2
+    1. User can add their to do list item
+
+Requirements for to do list item   
+    1. Title
+    2. Important level
+    3. Due date
+
+Algorithm for feature 2
+    1. get use input from form (title , important level and due date)
+    2. Store them in local Storage.
+
+Features 3
+    1. User can see the Profile
+    2. The profile will show how many in total, progess , success and removed 
+
+Algorithm for Features 3
+    1. Get the list items from local Storage
+    2. By using array method, calculate the total of progess, success and removed 
+
+Features 4
+    1. User can see their total lists, success, removed and progress
+
+Algorithm for features 4
+    1. Get the list items from local Storage and show them 
+
+Features 5
+    1. User can removed their list items
+    
+Algorithm for features 5
+    1. Add event listener and change data of related object to removed 
+
+Features 6
+    1. User can search to do lists for a specific date
+
+Algorithm for features 6
+    1. Get user input date
+    2. find list for that date and show them
+
+DATA FORMAT for local Storage 
+    1. it will be array of objects
+    2. each object will contain this properties 
+        1. added date
+        2. due date 
+        3. title 
+        4. important level (1 to 3)
+        5. status (ongoing, progress, success, remove)
+
+
+
+ADDITIONAL Features
+    1. User can navigate front and back for date and look for the to do lists for that date
+
