@@ -1,0 +1,207 @@
+:root 
+{
+    --starColor : #fbff00;
+    --borderColor : #000;
+    --moreButtonColor : #ede8e9;
+    --titleColor : #fff;
+    --successColor : #07da18;
+    --headingColor : #474a56;
+    --importantColor : #1e1e1e;
+    --importantBackColor : rgba(255,255,255,0.7);
+    --progressColor : #0057e4;
+    --backColor : #0b0b0d;
+    --removeColor : red;
+    --headingBackColor : #d3d5fd;
+    --headFont : "Roboto", sans-serif;
+    --textFont : "Inter", sans-serif;
+    --headingsize : 24px;
+    --secondHeadingSize : 14px;
+}
+
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body 
+{
+    min-height: 100vh;
+    background-color: var(--backColor);
+    position: relative;
+}
+
+.active 
+{
+    background-color: var(--importantBackColor);
+}
+
+.header 
+{
+    padding: 15px 15px 0px 15px;
+}
+
+.header .navigation ul 
+{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--titleColor);
+}
+
+.header .navigation ul li.menu span 
+{
+    font-size: 30px;
+    cursor: pointer;
+    transition: transform 0.15s linear;
+}
+
+.header .navigation ul li.menu span:hover 
+{
+    transform: scale(1.05);
+}
+
+.header .navigation ul a span
+{
+    text-decoration: none;
+    color: var(--titleColor);
+    font-size: 30px;
+    transition: all 0.15s linear;
+}
+
+.header .navigation ul a span:hover 
+{
+    transform: scale(1.05);
+}
+
+/* Add Item */
+main 
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+main h2
+{
+    color: var(--moreButtonColor);
+    font-family: var(--headFont);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+main div 
+{
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    margin: 10px 0px;
+}
+
+main div input 
+{
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid var(--headingBackColor);
+    padding: 5px 10px;
+    color: var(--importantBackColor);
+}
+
+main div select 
+{
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid var(--headingBackColor);
+    padding: 5px 10px;
+    color: var(--importantBackColor);
+}
+
+main div select option 
+{
+    background-color: transparent;
+    border: 1px solid var(--headingBackColor);
+    padding: 5px 10px;
+    color: var(--borderColor);
+}
+
+main div label 
+{
+    color: var(--titleColor);
+    font-style: italic;
+    font-family: var(--textFont);
+    font-weight: lighter;
+    font-size: 16px;
+    padding-bottom: 5px;
+}
+
+main div button 
+{
+    width: 60px;
+    height: 20px;
+    background-color: transparent;
+    border: 1px solid var(--titleColor);
+    color: var(--titleColor);
+    border-radius: 5px;
+    font-size: small;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+main div button:hover 
+{
+    background-color: var(--titleColor);
+    color: var(--borderColor);
+}
+/* Menu Bar */
+.menu-bar 
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    background-color: var(--borderColor);
+    width: 0px;
+    box-shadow: 0px 1px 5px 1px var(--titleColor);
+    overflow: hidden;
+    transition: width 0.3s linear;
+}
+
+.menu-bar ul li a 
+{
+    color: var(--titleColor);
+    font-family: var(--textFont);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    padding: 10px 0px 5px 15px;
+    border-bottom: 1px solid var(--importantBackColor);
+    transition: all 0.5s linear;
+}
+
+.menu-bar ul li a:hover 
+{
+    background-color: var(--titleColor);
+    color: var(--backColor);
+}
+.menu-bar .menu-close 
+{
+    color: var(--titleColor);
+    margin: 15px 0px 20px 15px;
+}
+
+.menu-bar .menu-close span 
+{
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.warning 
+{
+    font-family: var(--textFont);
+    color: red;
+}

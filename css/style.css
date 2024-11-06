@@ -25,6 +25,11 @@
     box-sizing: border-box;
 }
 
+.active 
+{
+    background-color: var(--importantBackColor);
+}
+
 body 
 {
     background-color: var(--backColor);
