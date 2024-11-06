@@ -1,24 +1,21 @@
 "use strict";
 
+// Importing
+import { openMenu, closeMenu } from "./common.js";
+
 // Selecting Dom
 const openMenuBtn = document.querySelector(".menu");
-const closeMenu = document.querySelector(".menu-close");
-const menuBar = document.querySelector(".menu-bar");
+const closeMenuBtn = document.querySelector(".menu-close");
 const moreBtns = document.querySelectorAll(".more-btn");
 const controlBtns = document.querySelectorAll(".control-buttons")
 
 // Event Listener
 // for opening menu bar
-openMenuBtn.addEventListener("click", () => {
-    // show menu bar
-    menuBar.style.width = "225px";
-})
+openMenuBtn.addEventListener("click", openMenu);
 
 // for closing menu bar
-closeMenu.addEventListener("click", () => {
-    // close menu bar 
-    menuBar.style.width = "0";
-})
+closeMenuBtn.addEventListener("click", closeMenu);
+    
 
 // for opening control btns
 moreBtns.forEach((moreBtn) => {
