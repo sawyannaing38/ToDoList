@@ -1,3 +1,4 @@
+
 import { openMenu, closeMenu, showNoListsMessage, getListItem } from "./common.js";
 
 const openMenuBtn = document.querySelector(".menu");

@@ -70,6 +70,7 @@ function getHomeListItem(obj)
 function showNoListsMessage()
 {   
     const listItems = document.querySelector(".list-items");
+
     const p =document.createElement("p");
     p.className = "remind";
     p.innerHTML = `You don't have any to do lists.Add <a href="add.html">Here.</a>`;
@@ -106,10 +107,13 @@ function getListItem(obj)
                 <h4 class="added-date">Added Date: <span>${obj.addedDate}</span></h4>
                 <h4 class="due-date">Due Date: <span>${obj.dueDate}</span></h4>
             </div>
+
         <span class="${obj.status} status">${obj.status}</span>
+
     `;
 
     return item;
 }
-// Exporting
+
 export { openMenu, closeMenu, getHomeListItem, showNoListsMessage, getListItem };
+
