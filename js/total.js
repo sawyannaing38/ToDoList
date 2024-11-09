@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
         for (const todoList of todoLists)
         {
             // Getting item
-            const item = getTotalListItem(todoList);
+            const item = getListItem(todoList);
 
             listItems.append(item);
         }

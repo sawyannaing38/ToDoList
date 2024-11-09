@@ -81,7 +81,8 @@ body
     font-size: var(--headingsize);
 }
 
-.total-list
+.total-list,
+.success-list
 {
     font-family: var(--textFont);
     padding: 10px 0px 20px 15px;
@@ -206,7 +207,7 @@ body
 {
     color: var(--removeColor);
 }
-.remind 
+.remind
 {
     color: var(--titleColor);
     font-family: var(--textFont);
