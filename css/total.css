@@ -82,7 +82,8 @@ body
 }
 
 .total-list,
-.success-list
+.success-list,
+.remove-list
 {
     font-family: var(--textFont);
     padding: 10px 0px 20px 15px;
