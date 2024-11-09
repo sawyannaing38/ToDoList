@@ -1,7 +1,7 @@
 "use strict";
 
 // Importing
-import { openMenu, closeMenu } from "./common.js";
+import { openMenu, closeMenu, getHomeListItem, showNoListsMessage } from "./common.js";
 
 // Selecting Dom
 const openMenuBtn = document.querySelector(".menu");
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     return;
                 }
                 // Create an item
-                const item = getListItem(todayList);
+                const item = getHomeListItem(todayList);
                 listItems.append(item);
 
                 // Adding event listener on more Btn
@@ -100,70 +100,6 @@ document.addEventListener("DOMContentLoaded", () => {
         showNoListsMessage();
     }
 })
-
-// For Getting to do list item
-function getListItem(obj)
-{
-    // Create a div with item class
-    const div = document.createElement("div");
-    div.className = "item";
-    div.innerHTML = `<span class="hidden">${obj.importance}</span>`
-    // Create another div with details class name
-    const detailDiv = document.createElement("div");
-    detailDiv.className = "details";
-
-    // Create another div with importance class name
-    const importanceDiv = document.createElement("div");
-    importanceDiv.className = "importance";
-
-    // Loop the important of obj
-    for (let i = 0; i < obj.importance; i++)
-    {
-        importanceDiv.innerHTML += `
-            <span class="material-symbols-outlined">
-                grade
-            </span>
-        `;
-    }
-
-    // Appedning divTwo to item div
-    detailDiv.append(importanceDiv);
-
-    detailDiv.innerHTML += `
-        <h2 class="item-title">${obj.title}</h2>
-        <span class="status-${obj.status}">${obj.status}</span>
-    `;
-
-    div.append(detailDiv);
-
-    if (obj.status == "unfinished")
-    {
-        div.innerHTML += `
-        <div class="control">
-            <span class="material-symbols-outlined more-btn">
-                more_vert
-            </span>
-            <ul class="control-buttons">
-                <li class="success">Success</li>
-                <li class="remove">Remove</li>
-            </ul>
-        </div>
-    `;
-    }
-
-    return div;
-
-}
-
-// For showing no to do lists
-function showNoListsMessage()
-{
-    const p =document.createElement("p");
-    p.className = "remind";
-    p.innerHTML = `You don't have any to do lists.Add <a href="add.html">Here.</a>`;
-
-    listItems.append(p);
-}
 
 // For Success Progress
 function successProgress(obj)
