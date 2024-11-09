@@ -78,59 +78,6 @@ body
     transform: scale(1.05);
 }
 
-
-.header .navigation ul .search 
-{
-    display: flex;
-    align-items: center;
-}
-
-.header .navigation ul .search input,
-.header .navigation ul .search button 
-{
-    height: 20px;
-}
-
-
-.header .navigation ul .search input:focus 
-{
-    outline: none;
-}
-
-.header .navigation ul .search input
-{
-    border: 1px solid var(--backColor);
-    border-radius: 100px 0px 0px 100px;
-    padding: 0px 10px;
-}
-
-.header .navigation ul .search button 
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.header .navigation ul .search button span 
-{
-    font-size: 16px;
-    padding: 5px;
-}
-
-.header .navigation ul .search button 
-{
-    background-color: var(--titleColor);
-    cursor: pointer;
-    border-radius: 0px 100px 100px 0px;
-    border: 1px solid var(--backColor);
-    transition: background-color 0.15s linear;
-}
-
-.header .navigation ul .search button:hover 
-{
-    background-color: transparent;
-}
-
 .header-title 
 {
     font-family: var(--headFont);
@@ -172,7 +119,8 @@ body
     transition: all 0.5s linear;
 }
 
-.important-list button:hover 
+.important-list button:hover,
+.important-list button.active
 {
     border: 1px solid var(--importantBackColor);
     background-color: transparent;
@@ -216,19 +164,20 @@ body
     padding: 5px 0px 15px 0px;
 }
 
-.item .details .status 
+.item .details span[class^="status"]
 {
     font-family: var(--textFont);
     font-size: 12px;
     font-style: italic;
 }
 
-.item .details .progress 
+
+.item .details span[class$="unfinished"] 
 {
     color: var(--progressColor);
 }
 
-.item .details .success 
+.item .details span[class$="success"] 
 {
     color: var(--successColor);
 }
@@ -323,4 +272,20 @@ body
 {
     font-size: 26px;
     cursor: pointer;
+}
+
+.remind 
+{
+    color: var(--titleColor);
+    font-family: var(--textFont);
+}
+
+.remind a 
+{
+    color: var(--headingBackColor);
+}
+
+.hidden 
+{
+    display: none;
 }
