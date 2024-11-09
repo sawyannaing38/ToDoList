@@ -83,7 +83,10 @@ body
 
 .total-list,
 .success-list,
-.remove-list
+.remove-list,
+.important3-list,
+.important2-list,
+.important1-list
 {
     font-family: var(--textFont);
     padding: 10px 0px 20px 15px;

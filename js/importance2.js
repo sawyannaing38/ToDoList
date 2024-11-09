@@ -3,7 +3,7 @@ import { openMenu, closeMenu, showNoListsMessage, getListItem } from "./common.j
 
 const openMenuBtn = document.querySelector(".menu");
 const closeMenuBtn = document.querySelector(".menu-close");
-const RemoveList = document.querySelector(".remove-list");
+const important2List = document.querySelector(".important2-list");
 const listItems = document.querySelector(".list-items")
 
 openMenuBtn.addEventListener("click", openMenu);
@@ -16,20 +16,20 @@ document.addEventListener("DOMContentLoaded", () => {
     if (todoLists)
     {
         // Get the list for success
-        const RemoveLists = todoLists.filter((todoList) => {
-            return todoList.status == "removed";
+        const important2Lists = todoLists.filter((todoList) => {
+            return todoList.importance == 2;
         })
 
-        const RemoveListCount = RemoveLists.length;
+        const important2ListCount = important2Lists.length;
 
-        RemoveList.textContent = `${RemoveListCount} items`;
+        important2List.textContent = `${important2ListCount} items`;
 
-        if (RemoveListCount != 0)
+        if (important2ListCount != 0)
         {
             // loop the list and show
-            for (const removeList of RemoveLists)
+            for (const important2List of important2Lists)
             {
-                const item = getListItem(removeList);
+                const item = getListItem(important2List);
 
                 listItems.append(item);
             }
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const p = document.createElement("p");
             p.className = "remind";
 
-            p.textContent = "No Removed list yet";
+            p.textContent = "No Important-2 list yet";
             listItems.append(p);
         }
     }
