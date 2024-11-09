@@ -115,5 +115,50 @@ function getListItem(obj)
     return item;
 }
 
-export { openMenu, closeMenu, getHomeListItem, showNoListsMessage, getListItem };
+// for Getting div for profile.js
+function getDiv(status, number)
+{
+    const div = document.createElement("div");
+    div.className = `${status} item`;
+
+    // Create a detail div
+    const detail = document.createElement("div");
+    detail.className = "detail";
+    detail.innerHTML = `<h3>${number}</h3>`;
+
+    const span = document.createElement("span");
+    span.className = "material-symbols-outlined";
+
+    // Create a textContent depedning on status
+    if (status == "total")
+    {
+        span.textContent = "north_east";
+    }
+
+    else if (status == "success")
+    {
+        span.textContent = "check";
+    }
+
+    else if (status == "removed")
+    {
+        span.textContent = "delete";
+    }
+
+    else 
+    {
+        span.textContent = "star";
+    }
+
+    detail.append(span);
+
+    div.append(detail);
+    div.innerHTML += `
+        <h4>${status.toUpperCase()}</h4>
+    `;
+
+    return div;
+}
+
+export { openMenu, closeMenu, getHomeListItem, showNoListsMessage, getListItem, getDiv };
 

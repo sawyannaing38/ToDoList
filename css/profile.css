@@ -1,0 +1,204 @@
+:root 
+{
+    --starColor : #fbff00;
+    --borderColor : #000;
+    --moreButtonColor : #ede8e9;
+    --titleColor : #fff;
+    --successColor : #07da18;
+    --headingColor : #474a56;
+    --importantColor : #1e1e1e;
+    --importantBackColor : rgba(255,255,255,0.7);
+    --progressColor : #0057e4;
+    --backColor : #0b0b0d;
+    --removeColor : red;
+    --headingBackColor : #d3d5fd;
+    --headFont : "Roboto", sans-serif;
+    --textFont : "Inter", sans-serif;
+    --headingsize : 24px;
+    --secondHeadingSize : 14px;
+}
+
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.active 
+{
+    background-color: var(--importantBackColor);
+}
+
+body 
+{
+    background-color: var(--backColor);
+    min-height: 100vh;
+}
+
+.header 
+{
+    background-color: var(--headingBackColor);
+    border-radius: 0px 0px 120px 0px;
+    min-height: 150px;
+}
+
+
+
+.header .navigation ul
+{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.header .navigation ul .menu span
+{
+    font-size: 30px;
+    cursor: pointer;
+    transition: transform 0.3s linear;
+}
+
+.header .navigation ul .menu span:hover 
+{
+    transform: scale(1.05);
+}
+
+.header .navigation ul .profile span
+{
+    font-size: 29px;
+    cursor: pointer;
+    transition: transform 0.3s linear;
+}
+
+.header .navigation ul .profile span:hover 
+{
+    transform: scale(1.05);
+}
+
+.header-title 
+{
+    font-family: var(--headFont);
+    padding: 20px 0px 0px 15px;
+    color: var(--headingColor);
+    font-size: var(--headingsize);
+}
+
+.header-info
+{
+    font-family: var(--textFont);
+    padding: 10px 0px 20px 15px;
+    color: var(--headingColor);
+    font-weight: 400;
+    font-size: var(--secondHeadingSize);
+}
+
+.menu-bar 
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    background-color: var(--borderColor);
+    width: 0px;
+    box-shadow: 0px 1px 5px 1px var(--titleColor);
+    overflow: hidden;
+    transition: width 0.3s linear;
+}
+
+.menu-bar ul li a 
+{
+    color: var(--titleColor);
+    font-family: var(--textFont);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    padding: 10px 0px 5px 15px;
+    border-bottom: 1px solid var(--importantBackColor);
+    transition: all 0.5s linear;
+}
+
+.menu-bar ul li a:hover 
+{
+    background-color: var(--titleColor);
+    color: var(--backColor);
+}
+.menu-bar .menu-close 
+{
+    color: var(--titleColor);
+    margin: 15px 0px 20px 15px;
+}
+
+.menu-bar .menu-close span 
+{
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.list-items 
+{   
+    margin: 15px;
+    display: flex;
+    grid-area: 45px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.list-items .item 
+{
+    width: 140px;
+    height: 80px;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    padding: 5px 10px;
+    margin: 15px;
+    border-radius: 10px;
+    font-family: var(--headFont);
+    color: var(--titleColor);
+    transition: transform 0.5s linear;
+    cursor: pointer;
+}
+
+.list-items .item:hover 
+{
+    transform: scale(1.02);
+}
+
+.list-items .item .detail 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.list-items .success 
+{
+    border: 1px solid var(--successColor);
+}
+
+.list-items .total 
+{
+    border: 1px solid var(--titleColor);
+}
+
+.list-items .remove 
+{
+    border: 1px solid var(--removeColor);
+}
+
+.list-items div[class^="important"]
+{
+    border: 1px solid var(--starColor);
+}
+
+.item h3,
+.item h4
+{
+    font-size: 16px;
+    font-weight: 400;
+}
