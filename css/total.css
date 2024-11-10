@@ -222,3 +222,8 @@ body
     color: var(--headingBackColor);
 }
 
+.active 
+{
+    background-color: var(--importantBackColor);
+}
+

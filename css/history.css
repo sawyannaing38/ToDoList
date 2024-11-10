@@ -235,3 +235,8 @@ main .date-navigation .date
 {
     color: var(--removeColor);
 }
+
+.active 
+{
+    background-color: var(--importantBackColor);
+}
