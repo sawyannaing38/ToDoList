@@ -58,5 +58,22 @@ DATA FORMAT for local Storage
 
 
 ADDITIONAL Features
-    1. User can navigate front and back for date and look for the to do lists for that date
 
+History
+    1. User should able to see all of their to do lists based on due date by navigating
+
+Algorithm for History
+    1. Get all of user due date in an array 
+    2. Select today due date and show to do list for it 
+    3. Get the index of today due date 
+    4. if not exists
+        1. Define index as -1 
+        2. Show nothing for today and right arrow 
+        3. Click right arrow will show to do lists for the first day in array 
+        4. Add index to 1 
+        5. if index is 0 then no left arrow 
+        6. if index is same as arr.length - 1 no right arrow 
+    5. if exists
+        1. show to do lists for today 
+        2. Define index as it is 
+        3. go back to step 4.4

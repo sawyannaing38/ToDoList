@@ -1,0 +1,237 @@
+:root 
+{
+    --starColor : #fbff00;
+    --borderColor : #000;
+    --moreButtonColor : #ede8e9;
+    --titleColor : #fff;
+    --successColor : #07da18;
+    --headingColor : #474a56;
+    --importantColor : #1e1e1e;
+    --importantBackColor : rgba(255,255,255,0.7);
+    --progressColor : #0057e4;
+    --backColor : #0b0b0d;
+    --removeColor : red;
+    --headingBackColor : #d3d5fd;
+    --headFont : "Roboto", sans-serif;
+    --textFont : "Inter", sans-serif;
+    --headingsize : 24px;
+    --secondHeadingSize : 14px;
+}
+
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body 
+{
+    min-height: 100vh;
+    background-color: var(--backColor);
+}
+
+.header 
+{
+    background-color: var(--headingBackColor);
+    border-radius: 0px 0px 120px 0px;
+    min-height: 150px;
+}
+
+.header .navigation ul
+{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.header .navigation ul .menu span
+{
+    font-size: 30px;
+    cursor: pointer;
+    transition: transform 0.3s linear;
+}
+
+.header .navigation ul .menu span:hover 
+{
+    transform: scale(1.05);
+}
+
+.header .navigation ul .profile span
+{
+    font-size: 29px;
+    cursor: pointer;
+    transition: transform 0.3s linear;
+}
+
+.header .navigation ul .profile span:hover 
+{
+    transform: scale(1.05);
+}
+
+.header-title 
+{
+    font-family: var(--headFont);
+    padding: 20px 0px 0px 15px;
+    color: var(--headingColor);
+    font-size: var(--headingsize);
+}
+
+.menu-bar 
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    background-color: var(--borderColor);
+    width: 0px;
+    box-shadow: 0px 1px 5px 1px var(--titleColor);
+    overflow: hidden;
+    transition: width 0.3s linear;
+}
+
+.menu-bar ul li a 
+{
+    color: var(--titleColor);
+    font-family: var(--textFont);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    padding: 10px 0px 5px 15px;
+    border-bottom: 1px solid var(--importantBackColor);
+    transition: all 0.5s linear;
+}
+
+.menu-bar ul li a:hover 
+{
+    background-color: var(--titleColor);
+    color: var(--backColor);
+}
+.menu-bar .menu-close 
+{
+    color: var(--titleColor);
+    margin: 15px 0px 20px 15px;
+}
+
+.menu-bar .menu-close span 
+{
+    font-size: 26px;
+    cursor: pointer;
+}
+
+main .date-navigation 
+{
+    margin: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .date-navigation .left span,
+main .date-navigation .right span 
+{
+    font-size: 40px;
+    color: var(--titleColor);
+    cursor: pointer;
+    transition: all 0.1s linear;
+}
+
+main .date-navigation .left span:hover,
+main .date-navigation .right span:hover 
+{
+    color: var(--progressColor);
+}
+
+main .date-navigation .date 
+{
+    color: var(--titleColor);
+    font-family: var(--headFont);
+}
+.remind 
+{
+    font-family: var(--textFont);
+    color: var(--titleColor);
+    margin: 0px 15px 0px 15px;
+}
+
+.remind a 
+{
+    color: var(--importantBackColor);
+}
+
+.list-items 
+{
+    margin: 0px 15px;
+    padding-top: 30px;
+}
+
+.item 
+{
+    border: 1px solid var(--borderColor);
+    box-shadow: 0px 0px 4px 1px var(--headingBackColor);
+    padding: 5px 10px;
+    margin: 15px 0px;
+}
+
+.item .importance span 
+{
+    color: var(--starColor);
+    font-size: 15px;
+}
+
+.item .importance 
+{
+    display: flex;
+    gap: 0;
+}
+
+.item .item-title 
+{
+    font-family: var(--headFont);
+    color: var(--titleColor);
+    font-size: 16px;
+    padding: 5px 0px;
+}
+
+.item .date-list
+{
+    display: flex;
+    gap: 20px;
+    font-family: var(--textFont);
+    font-size: 12px;
+    font-style: italic;
+    color: var(--titleColor);
+    font-weight: lighter;
+    padding: 5px 0px 10px 0px;
+    font-weight: lighter;
+}
+
+.item .date-list span 
+{
+    color: var(--importantBackColor);
+}
+
+.item .status 
+{
+    font-family: var(--textFont);
+    font-size: 12px;
+    font-style: italic;
+}
+
+.item .success 
+{
+    color: var(--successColor);
+}
+
+.item .unfinished 
+{
+    color: var(--progressColor);
+}
+
+.item .removed 
+{
+    color: var(--removeColor);
+}
