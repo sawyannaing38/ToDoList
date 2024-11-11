@@ -60,6 +60,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // if no exists
     else 
     {
+        leftBtn.style.display = "none";
+        rightBtn.style.display = "none";
+
         // Show there is no to do lists
         showNoListsMessage();
     }
@@ -67,9 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // For display correct arrow
 function displayNavigation(index, left, right, dateArr)
-{
-    console.log(index);
-    console.log(dateArr.length);
+{   
     if ((index < 0))
     {
         if (dateArr.length == 0)

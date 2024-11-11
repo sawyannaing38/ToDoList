@@ -240,3 +240,8 @@ main .date-navigation .date
 {
     background-color: var(--importantBackColor);
 }
+
+.left, .right 
+{
+    visibility: hidden;
+}
