@@ -173,8 +173,8 @@ rightBtn.addEventListener("click", () => {
     displayNavigation(index, leftBtn, rightBtn, dateArr);
     
     // Remove all list items
-    const listItemChildrens = listItems.children;
-
+    const listItemChildrens = Array.from(listItems.children);
+    
     for (const listItemChildren of listItemChildrens)
     {
         listItemChildren.remove();

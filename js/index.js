@@ -53,12 +53,13 @@ document.addEventListener("DOMContentLoaded", () => {
         // Show the user to do lists if exists
         if (todayLists.length > 0)
         {
+            console.log(todayLists);
             // Loop that lists and show
             for (const todayList of todayLists)
             {   
                 if (todayList.status == "removed")
                 {
-                    return;
+                    continue;
                 }
                 // Create an item
                 const item = getHomeListItem(todayList);
